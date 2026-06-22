@@ -11,8 +11,10 @@ public class PSItemModelProvider extends ItemModelProvider {
         super(output, PeskyScalies.MOD_ID, existingFileHelper);
     }
 
+    /*
+        basicItem(PSItems.GRIDSECT.get());
+     */
     @Override
     protected void registerModels() {
-        basicItem(PSItems.GRIDSECT.get());
     }
 }

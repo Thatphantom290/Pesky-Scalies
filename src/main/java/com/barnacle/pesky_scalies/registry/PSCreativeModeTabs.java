@@ -4,9 +4,7 @@ import com.barnacle.pesky_scalies.PeskyScalies;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -18,11 +16,11 @@ public class PSCreativeModeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, PeskyScalies.MOD_ID);
 
     public static final Supplier<CreativeModeTab> PESKY_SCALIES_TAB = CREATIVE_MODE_TAB.register("pesky_scalies_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(Items.ARMADILLO_SCUTE))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(PSItems.ICON.get()))
                     .title(Component.translatable("creativetab.pesky_scalies.pesky_scalies_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
-
-
+                        output.accept(PSItems.GRIDSECT);
+                        output.accept(PSItems.GRIDSECT_SPAWN_EGG);
                     }).build());
 
     public static void register(IEventBus eventBus) {
