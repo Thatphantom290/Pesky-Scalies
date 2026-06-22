@@ -1,5 +1,9 @@
 package com.barnacle.pesky_scalies;
 
+import com.barnacle.pesky_scalies.registry.PSCreativeModeTabs;
+import com.barnacle.pesky_scalies.registry.PSEntities;
+import com.barnacle.pesky_scalies.registry.PSItems;
+import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -30,6 +34,8 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+import java.util.Locale;
+
 @Mod(PeskyScalies.MOD_ID)
 public class PeskyScalies {
     public static final String MOD_ID = "pesky_scalies";
@@ -41,6 +47,15 @@ public class PeskyScalies {
 
         NeoForge.EVENT_BUS.register(this);
 
+        PSCreativeModeTabs.register(modEventBus);
+
+        PSItems.register(modEventBus);
+
+        PSEntities.register(modEventBus);
+    }
+
+    public static ResourceLocation modPrefix(String name) {
+        return ResourceLocation.fromNamespaceAndPath(MOD_ID, name.toLowerCase(Locale.ROOT));
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {

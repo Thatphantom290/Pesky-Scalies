@@ -1,0 +1,31 @@
+package com.barnacle.pesky_scalies.registry;
+
+import com.barnacle.pesky_scalies.PeskyScalies;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredRegister;
+
+import java.util.function.Supplier;
+
+public class PSCreativeModeTabs {
+
+    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB =
+            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, PeskyScalies.MOD_ID);
+
+    public static final Supplier<CreativeModeTab> PESKY_SCALIES_TAB = CREATIVE_MODE_TAB.register("pesky_scalies_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(Items.ARMADILLO_SCUTE))
+                    .title(Component.translatable("creativetab.pesky_scalies.pesky_scalies_tab"))
+                    .displayItems((itemDisplayParameters, output) -> {
+
+
+                    }).build());
+
+    public static void register(IEventBus eventBus) {
+        CREATIVE_MODE_TAB.register(eventBus);
+    }
+}
