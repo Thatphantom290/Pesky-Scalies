@@ -3,6 +3,7 @@ package com.barnacle.pesky_scalies.entity.mob.release;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.PathfinderMob;
@@ -13,6 +14,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 
 public class Gridsect extends PathfinderMob {
+
     public Gridsect(EntityType<? extends PathfinderMob> entityType, Level level) {
         super(entityType, level);
     }

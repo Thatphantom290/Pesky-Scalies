@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "pesky_scalies:item/pesky_scalies"
+    "layer0": "pesky_scalies:item/icon_creative_tab"
   }
 }

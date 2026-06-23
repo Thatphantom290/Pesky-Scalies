@@ -1,7 +1,6 @@
 package com.barnacle.pesky_scalies.client.models.entity;
 
 import com.barnacle.pesky_scalies.PeskyScalies;
-import com.barnacle.pesky_scalies.client.animations.entity.GridsectAnimations;
 import com.barnacle.pesky_scalies.entity.mob.release.Gridsect;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
@@ -50,7 +49,8 @@ public class GridsectModel<T extends Gridsect> extends HierarchicalModel<T> {
 
     @Override
     public void setupAnim(Gridsect entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+        this.root.resetPose();
 
-        this.animateWalk(GridsectAnimations.GRIDSECT_WALK, limbSwing, limbSwingAmount, 2f, 2.5f);
+        this.root.yRot = (float) Math.cos(limbSwing * 0.1062F) * 0.3F * limbSwingAmount;
     }
 }
