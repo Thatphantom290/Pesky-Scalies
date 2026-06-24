@@ -51,6 +51,6 @@ public class GridsectModel<T extends Gridsect> extends HierarchicalModel<T> {
     public void setupAnim(Gridsect entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
         this.root.resetPose();
 
-        this.root.yRot = (float) Math.cos(limbSwing * 0.1062F) * 0.3F * limbSwingAmount;
+        this.root.yRot = (float) Math.sin(limbSwing * 0.1062F) * 0.5F * limbSwingAmount;
     }
 }

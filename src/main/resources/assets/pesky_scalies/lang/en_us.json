@@ -2,8 +2,10 @@
   "creativetab.pesky_scalies.pesky_scalies_tab": "Pesky Scalies Tab",
 
   "entity.pesky_scalies.gridsect": "Gridsect",
+  "entity.pesky_scalies.shame_crest": "Shame Crest",
 
   "item.pesky_scalies.gridsect_spawn_egg": "Gridsect Spawn Egg",
+  "item.pesky_scalies.shame_crest_spawn_egg": "Shame Crest Spawn Egg",
 
   "item.pesky_scalies.gridsect": "Gridsect"
 }

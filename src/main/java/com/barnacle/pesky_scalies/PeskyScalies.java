@@ -1,6 +1,7 @@
 package com.barnacle.pesky_scalies;
 
 import com.barnacle.pesky_scalies.client.renderer.entity.GridsectRenderer;
+import com.barnacle.pesky_scalies.client.renderer.entity.ShameCrestRenderer;
 import com.barnacle.pesky_scalies.datagen.DataGenerators;
 import com.barnacle.pesky_scalies.registry.PSCreativeModeTabs;
 import com.barnacle.pesky_scalies.registry.PSEntities;
@@ -61,6 +62,7 @@ public class PeskyScalies {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
 
+            EntityRenderers.register(PSEntities.SHAME_CREST.get(), ShameCrestRenderer::new);
             EntityRenderers.register(PSEntities.GRIDSECT.get(), GridsectRenderer::new);
         }
     }

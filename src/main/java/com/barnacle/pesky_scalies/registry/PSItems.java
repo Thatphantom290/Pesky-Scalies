@@ -21,6 +21,10 @@ public class PSItems {
             () -> new DeferredSpawnEggItem(PSEntities.GRIDSECT, 0x4f4f4f, 0x0e0e0e,
                     new Item.Properties()));
 
+    public static final DeferredItem<Item> SHAME_CREST_SPAWN_EGG = ITEMS.register("shame_crest_spawn_egg",
+            () -> new DeferredSpawnEggItem(PSEntities.SHAME_CREST, 0x501910, 0x8f7515,
+                    new Item.Properties()));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

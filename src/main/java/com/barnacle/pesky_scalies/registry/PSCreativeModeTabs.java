@@ -21,6 +21,7 @@ public class PSCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(PSItems.GRIDSECT);
                         output.accept(PSItems.GRIDSECT_SPAWN_EGG);
+                        output.accept(PSItems.SHAME_CREST_SPAWN_EGG);
                     }).build());
 
     public static void register(IEventBus eventBus) {
